@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ButtonInput : MonoBehaviour
+{
+    public GameObject objectToSpawn;
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Wurde die Taste ___ auf dem Touch Controller gedrückt?
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            //Button A wurde gedrückt => Aktion ausführen
+            print("Button A wurde gedrückt!");
+
+            //Sphere von Himmel fallen lassen
+            Instantiate(objectToSpawn);
+        }
+
+    }
+}
